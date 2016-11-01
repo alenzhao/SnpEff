@@ -15,9 +15,9 @@ import org.snpeff.vcf.VcfHeader;
 /**
  * Opens a VCF file and iterates over all entries
  *
- * Format: VCF 4.1
+ * Format: VCF 4.3
  *
- * Reference: 	http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41
+ * Reference: 	Old 4.1 format: http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41
  * 				Old 4.0 format: http://www.1000genomes.org/wiki/doku.php?id=1000_genomes:analysis:vcf4.0
  *
  * 1. CHROM chromosome: an identifier from the reference genome. All entries for a specific CHROM should form a contiguous block within the VCF file.(Alphanumeric String, Required)
@@ -53,7 +53,7 @@ import org.snpeff.vcf.VcfHeader;
  *
  * @author pcingola
  */
-public class VcfFileIterator extends MarkerFileIterator<VcfEntry> implements Parser<VcfEntry> {
+public class VcfFileIterator extends MarkerFileIterator<VcfEntry>implements Parser<VcfEntry> {
 
 	public static final String MISSING = "."; // Missing value
 	private static final String EMPTY = "";
